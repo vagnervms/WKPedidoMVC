@@ -1,0 +1,312 @@
+object FrmPedidos: TFrmPedidos
+  Left = 0
+  Top = 0
+  Caption = 'Pedidos'
+  ClientHeight = 383
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter1: TSplitter
+    Left = 0
+    Top = 260
+    Width = 635
+    Height = 3
+    Cursor = crVSplit
+    Align = alBottom
+    ExplicitLeft = -29
+    ExplicitTop = 262
+    ExplicitWidth = 664
+  end
+  object PnlFiltro: TPanel
+    Left = 0
+    Top = 0
+    Width = 635
+    Height = 121
+    Align = alTop
+    BorderStyle = bsSingle
+    TabOrder = 0
+    DesignSize = (
+      631
+      117)
+    object Label1: TLabel
+      Left = 32
+      Top = 16
+      Width = 32
+      Height = 13
+      Caption = 'Pedido'
+    end
+    object Label3: TLabel
+      Left = 32
+      Top = 48
+      Width = 33
+      Height = 13
+      Caption = 'Cliente'
+    end
+    object BtnLocalizar: TButton
+      Left = 9
+      Top = 79
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Cancel = True
+      Caption = 'Localizar'
+      TabOrder = 0
+      OnClick = BtnLocalizarClick
+    end
+    object BtnLimpar: TButton
+      Left = 90
+      Top = 79
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = 'Limpar'
+      TabOrder = 1
+      OnClick = BtnLimparClick
+    end
+    object BtnClose: TButton
+      Left = 542
+      Top = 13
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Fechar'
+      TabOrder = 2
+      OnClick = BtnCloseClick
+    end
+    object EdtNumPed: TEdit
+      Left = 80
+      Top = 13
+      Width = 62
+      Height = 21
+      TabOrder = 3
+    end
+    object EdtDatEmis: TDateTimePicker
+      Left = 272
+      Top = 13
+      Width = 105
+      Height = 21
+      Date = 44895.000000000000000000
+      Time = 0.462915543983399400
+      Enabled = False
+      TabOrder = 4
+    end
+    object EdtCliente: TEdit
+      Left = 80
+      Top = 45
+      Width = 297
+      Height = 21
+      CharCase = ecUpperCase
+      TabOrder = 5
+    end
+    object ChkDatEmis: TCheckBox
+      Left = 209
+      Top = 15
+      Width = 57
+      Height = 17
+      Caption = 'Emiss'#227'o'
+      TabOrder = 6
+    end
+  end
+  object ToolBar: TToolBar
+    Left = 0
+    Top = 121
+    Width = 635
+    Height = 29
+    ButtonHeight = 24
+    ButtonWidth = 69
+    Caption = 'ToolBar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ShowCaptions = True
+    TabOrder = 1
+    Transparent = True
+    object BtnInc: TToolButton
+      Left = 0
+      Top = 0
+      Caption = 'Incluir'
+      ImageIndex = 0
+      OnClick = BtnIncClick
+    end
+    object BtnAlt: TToolButton
+      Tag = 1
+      Left = 69
+      Top = 0
+      Caption = 'Alterar'
+      ImageIndex = 1
+      OnClick = BtnIncClick
+    end
+    object BtnExc: TToolButton
+      Left = 138
+      Top = 0
+      Caption = 'Excluir'
+      ImageIndex = 2
+    end
+    object BtnCon: TToolButton
+      Tag = 2
+      Left = 207
+      Top = 0
+      Caption = 'Consultar'
+      ImageIndex = 3
+    end
+  end
+  object DBG: TDBGrid
+    Left = 0
+    Top = 150
+    Width = 635
+    Height = 110
+    Align = alClient
+    DataSource = DsPedido
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ReadOnly = True
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'NumPed'
+        Title.Caption = 'Pedido'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DatEmis'
+        Title.Caption = 'Emiss'#227'o'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NomCli'
+        Title.Caption = 'Cliente'
+        Width = 400
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Cidade'
+        Width = 400
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'UF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ValorTot'
+        Title.Caption = 'Valor'
+        Visible = True
+      end>
+  end
+  object DBGItm: TDBGrid
+    Left = 0
+    Top = 263
+    Width = 635
+    Height = 120
+    Align = alBottom
+    DataSource = DsPedidoItm
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ReadOnly = True
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CodProd'
+        Title.Caption = 'C'#243'd'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Descricao'
+        Title.Caption = 'Produto'
+        Width = 480
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Qtd'
+        Title.Caption = 'Qtd.'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PrcVenda'
+        Title.Caption = 'Pre'#231'o'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ValorItem'
+        Title.Caption = 'Total'
+        Visible = True
+      end>
+  end
+  object DsPedido: TDataSource
+    DataSet = CDSPedido
+    Left = 103
+    Top = 174
+  end
+  object CDSPedido: TClientDataSet
+    Aggregates = <>
+    FetchOnDemand = False
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'NUMPED'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftDate
+        Name = 'DATEMIS'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'NOMCLI'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DsPPedido'
+    RemoteServer = DMServer.DSPBanco
+    Left = 32
+    Top = 174
+  end
+  object CDSPedidoItm: TClientDataSet
+    Aggregates = <>
+    IndexFieldNames = 'NumPed'
+    MasterFields = 'NumPed'
+    MasterSource = DsPedido
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DsPedidoItm'
+    RemoteServer = DMServer.DSPBanco
+    Left = 32
+    Top = 294
+  end
+  object DsPedidoItm: TDataSource
+    DataSet = CDSPedidoItm
+    Left = 103
+    Top = 294
+  end
+end

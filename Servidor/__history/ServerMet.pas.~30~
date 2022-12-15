@@ -1,0 +1,95 @@
+unit ServerMet;
+
+interface
+
+uses System.SysUtils, System.Classes, System.Json, Variants,
+    DataSnap.DSProviderDataModuleAdapter, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.VCLUI.Wait, FireDAC.Comp.UI,
+  FireDAC.Comp.Client, Datasnap.Provider, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Moni.Base, FireDAC.Moni.FlatFile;
+
+type
+  TServerMethods = class(TDSServerModule)
+    Banco: TFDConnection;
+    FDPDriver: TFDPhysMySQLDriverLink;
+    QryPedido: TFDQuery;
+    DsPPedido: TDataSetProvider;
+    QryPedidoItm: TFDQuery;
+    DsPedidoItm: TDataSetProvider;
+    QryCadPedido: TFDQuery;
+    QryCadPedidoItm: TFDQuery;
+    UpCadPedidoItm: TFDUpdateSQL;
+    DsCadPedidos: TDataSetProvider;
+    DsCadPedidosItm: TDataSetProvider;
+    QryPedProd: TFDQuery;
+    QryPedCli: TFDQuery;
+    DsPedProd: TDataSetProvider;
+    DsPedCli: TDataSetProvider;
+    FDGUIxWaitCursor: TFDGUIxWaitCursor;
+    FDMoniFlatFileClientLink: TFDMoniFlatFileClientLink;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    function EchoString(Value: string): string;
+    function ReverseString(Value: string): string;
+    procedure ExecSQL(SQL: String; Params: OleVariant; Values: OleVariant);
+    function MaisUm(Tabela: String; Campo: String): Integer;
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses System.StrUtils;
+
+function TServerMethods.EchoString(Value: string): string;
+begin
+  Result := Value;
+end;
+
+function TServerMethods.MaisUm(Tabela: String; Campo: String): Integer;
+var Qry: TFDQuery;
+begin
+  Qry:= TFDQuery.Create(Self);
+  Qry.Connection:= Banco;
+  Qry.SQL.Text := 'SELECT MAX('+ Campo + ') FROM '+ Tabela;
+  Qry.Open;
+  if Qry.Fields[0].AsVariant = Null
+  then Result:= 1
+  else Result:= Qry.Fields[0].Value + 1;
+  Qry.Close;
+  Qry.Free;
+end;
+
+procedure TServerMethods.ExecSQL(SQL: String; Params: OleVariant; Values: OleVariant);
+var Qry: TFDQuery; X: Byte;
+begin
+   Qry:= TFDQuery.Create(Self);
+   try
+     Qry.Connection:= Banco;
+     Qry.SQL.Text:= SQL;
+     if VarArrayDimCount(Params) > 0 then
+     for X := 0 to VarArrayDimCount(Params) -1 do
+       Qry.ParamByName(Params[X]).Value:= Values[X];
+     try
+       Qry.ExecSQL;
+     except
+       ApplicationHandleException(Nil);
+       Abort
+     end
+   finally
+     Qry.Free;
+   end;
+end;
+
+function TServerMethods.ReverseString(Value: string): string;
+begin
+  Result := System.StrUtils.ReverseString(Value);
+end;
+
+end.
+

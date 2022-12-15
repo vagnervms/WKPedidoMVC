@@ -1,0 +1,25 @@
+object DMServer: TDMServer
+  OldCreateOrder = False
+  Height = 123
+  Width = 204
+  object DSPBanco: TDSProviderConnection
+    ServerClassName = 'TServerMethods'
+    SQLConnection = SQLCon
+    Left = 96
+    Top = 17
+  end
+  object SQLCon: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DbxDatasnap'
+      'HostName=localhost'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      'Filters={}')
+    Left = 32
+    Top = 17
+    UniqueId = '{7D6CCE26-5551-46EE-91AA-15B6A8647B50}'
+  end
+end

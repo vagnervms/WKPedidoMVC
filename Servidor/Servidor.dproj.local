@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/08/11 11:52:20.000.832,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/11 12:36:50.000.990,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/12 15:11:13.000.975,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/12 15:17:23.000.901,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/20 11:50:59.000.380,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/08 14:13:55.000.973,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/08 14:13:56.000.260,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/10/08 14:13:56.000.478,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/10/08 14:16:58.000.148,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/04 14:28:05.000.865,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/04 14:28:06.000.229,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:28:11.000.420,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:38:19.000.992,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:38:19.000.686,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/12/04 14:38:20.000.188,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:39:53.000.074,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/12/04 14:39:53.000.567,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:39:53.000.361,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:47:33.000.580,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:47:33.000.779,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:47:33.000.280,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/04 14:48:13.000.247,D:\WinDesenv\WKPedido\Servidor\ServerCont.pas=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:48:13.000.247,D:\WinDesenv\WKPedido\Servidor\ServerCont.dfm=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.dfm</Transaction>
+    <Transaction>2022/12/04 14:48:20.000.355,D:\WinDesenv\WKPedido\Servidor\ServerMet.pas=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/12/04 14:48:20.000.355,D:\WinDesenv\WKPedido\Servidor\ServerMet.dfm=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.dfm</Transaction>
+    <Transaction>2022/12/04 14:48:27.000.235,D:\WinDesenv\WKPedido\Servidor\Unico.dfm=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/12/04 14:48:27.000.235,D:\WinDesenv\WKPedido\Servidor\Unico.pas=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/04 14:48:34.000.595,D:\WinDesenv\WKPedido\Servidor\Servidor.dproj=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/12/13 18:21:52.000.638,=D:\WinDesenv\WKPedido\Servidor\Unit1.pas</Transaction>
+    <Transaction>2022/12/13 18:23:00.000.066,D:\WinDesenv\WKPedido\Servidor\Unit1.pas=D:\WinDesenv\WKPedido\Servidor\Lib.pas</Transaction>
+  </Transactions>
+</BorlandProject>

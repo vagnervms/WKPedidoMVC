@@ -1,0 +1,9 @@
+unit Lib;
+
+interface
+
+uses IniFiles;
+
+implementation
+
+end.

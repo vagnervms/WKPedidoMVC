@@ -1,0 +1,250 @@
+object FrmCadPedidos: TFrmCadPedidos
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Pedidos'
+  ClientHeight = 397
+  ClientWidth = 521
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poOwnerFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 10
+    Top = 13
+    Width = 33
+    Height = 13
+    Caption = 'Cliente'
+  end
+  object Label3: TLabel
+    Left = 315
+    Top = 16
+    Width = 38
+    Height = 13
+    Caption = 'Emiss'#227'o'
+  end
+  object DBTDatEmis: TDBText
+    Left = 315
+    Top = 35
+    Width = 57
+    Height = 13
+    AutoSize = True
+    DataField = 'DatEmis'
+    DataSource = DsCadPedidos
+  end
+  object Label2: TLabel
+    Left = 395
+    Top = 13
+    Width = 51
+    Height = 13
+    Caption = 'Valor Total'
+  end
+  object DBTValorTot: TDBText
+    Left = 395
+    Top = 32
+    Width = 94
+    Height = 18
+    AutoSize = True
+    DataField = 'ValorTot'
+    DataSource = DsCadPedidos
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DBLCodCli: TDBLookupComboBox
+    Left = 10
+    Top = 32
+    Width = 289
+    Height = 21
+    DataField = 'CodCli'
+    DataSource = DsCadPedidos
+    KeyField = 'CodCli'
+    ListField = 'NomCli;Cidade;UF'
+    ListSource = DsPedCli
+    TabOrder = 0
+    OnExit = Alteracao
+  end
+  object DBG: TDBGrid
+    Left = 0
+    Top = 86
+    Width = 521
+    Height = 270
+    Align = alBottom
+    DataSource = DsCadPedidosItm
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ReadOnly = True
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CodProd'
+        Title.Caption = 'C'#243'd.'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Descricao'
+        Title.Caption = 'Produto'
+        Width = 206
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Qtd'
+        Title.Caption = 'Qtd.'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PrcVenda'
+        Title.Caption = 'Pre'#231'o'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ValorItem'
+        Title.Caption = 'Total'
+        Visible = True
+      end>
+  end
+  object Pnl: TPanel
+    Left = 0
+    Top = 356
+    Width = 521
+    Height = 41
+    Align = alBottom
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 2
+    DesignSize = (
+      521
+      41)
+    object BtnSalvar: TButton
+      Left = 310
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Salvar'
+      Enabled = False
+      TabOrder = 0
+      OnClick = BtnSalvarClick
+    end
+    object BtnCancelar: TButton
+      Left = 398
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Cancelar'
+      ModalResult = 2
+      TabOrder = 1
+    end
+  end
+  object ToolBar: TToolBar
+    Left = 0
+    Top = 57
+    Width = 521
+    Height = 29
+    Align = alBottom
+    ButtonHeight = 24
+    ButtonWidth = 54
+    Caption = 'ToolBar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ShowCaptions = True
+    TabOrder = 3
+    Transparent = True
+    object BtnInc: TToolButton
+      Left = 0
+      Top = 0
+      Caption = 'Incluir'
+      ImageIndex = 0
+      OnClick = BtnIncClick
+    end
+    object BtnAlt: TToolButton
+      Left = 54
+      Top = 0
+      Caption = 'Alterar'
+      ImageIndex = 3
+      OnClick = BtnAltClick
+    end
+    object BtnExc: TToolButton
+      Left = 108
+      Top = 0
+      Caption = 'Excluir'
+      ImageIndex = 2
+      OnClick = BtnExcClick
+    end
+  end
+  object DsCadPedidos: TDataSource
+    DataSet = CDSCadPedidos
+    Left = 152
+    Top = 133
+  end
+  object DsCadPedidosItm: TDataSource
+    DataSet = CDSCadPedidosItm
+    Left = 152
+    Top = 184
+  end
+  object DsPedCli: TDataSource
+    DataSet = CDSPedCli
+    Left = 328
+    Top = 133
+  end
+  object CDSCadPedidos: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'NUMPED'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DsCadPedidos'
+    RemoteServer = DMServer.DSPBanco
+    AfterInsert = CDSCadPedidosAfterInsert
+    Left = 56
+    Top = 133
+  end
+  object CDSCadPedidosItm: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'NUMPED'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DsCadPedidosItm'
+    RemoteServer = DMServer.DSPBanco
+    AfterInsert = CDSCadPedidosItmAfterInsert
+    Left = 56
+    Top = 184
+  end
+  object CDSPedCli: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DsPedCli'
+    RemoteServer = DMServer.DSPBanco
+    Left = 248
+    Top = 133
+  end
+end

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/08/11 11:52:20.000.832,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/11 12:36:50.000.990,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/12 15:11:13.000.975,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/12 15:17:23.000.901,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/20 11:50:59.000.380,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/08 14:13:55.000.973,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/08 14:13:56.000.260,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2022/10/08 14:13:56.000.478,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>2022/10/08 14:16:58.000.148,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/03 17:52:11.000.818,=C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/03 17:53:37.000.463,C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\WinDesenv\WKPedido\Cliente\Pedidos.dfm</Transaction>
+    <Transaction>2022/12/03 17:53:37.000.463,C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\WinDesenv\WKPedido\Cliente\Pedidos.pas</Transaction>
+    <Transaction>2022/12/03 17:53:47.000.880,C:\Users\Vagner-PC\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\WinDesenv\WKPedido\Cliente\Pedido.dproj</Transaction>
+    <Transaction>2022/12/03 18:19:02.000.783,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/03 18:21:17.000.374,D:\WinDesenv\WKPedido\Cliente\Unit1.pas=D:\WinDesenv\WKPedido\Cliente\Server.pas</Transaction>
+    <Transaction>2022/12/03 18:21:17.000.374,D:\WinDesenv\WKPedido\Cliente\Unit1.dfm=D:\WinDesenv\WKPedido\Cliente\Server.dfm</Transaction>
+    <Transaction>2022/12/05 14:52:18.000.106,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/05 15:55:33.000.409,D:\WinDesenv\WKPedido\Cliente\Unit1.pas=D:\WinDesenv\WKPedido\Cliente\CadPedidos.pas</Transaction>
+    <Transaction>2022/12/05 15:55:33.000.409,D:\WinDesenv\WKPedido\Cliente\Unit1.dfm=D:\WinDesenv\WKPedido\Cliente\CadPedidos.dfm</Transaction>
+    <Transaction>2022/12/05 19:01:18.000.811,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/05 19:07:33.000.198,D:\WinDesenv\WKPedido\Cliente\Unit1.dfm=D:\WinDesenv\WKPedido\Cliente\CadPedidosItm.dfm</Transaction>
+    <Transaction>2022/12/05 19:07:33.000.198,D:\WinDesenv\WKPedido\Cliente\Unit1.pas=D:\WinDesenv\WKPedido\Cliente\CadPedidosItm.pas</Transaction>
+    <Transaction>2022/12/06 17:44:06.000.639,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/06 18:36:52.000.023,=D:\WinDesenv\WKPedido\Cliente\CadPedidosAlt.pas</Transaction>
+    <Transaction>2022/12/07 14:23:28.000.452,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 15:55:18.000.289,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 15:56:28.000.226,D:\WinDesenv\WKPedido\Cliente\Unit1.pas=D:\WinDesenv\WKPedido\Cliente\Proxy.pas</Transaction>
+    <Transaction>2022/12/11 09:48:17.000.058,=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/11 09:48:43.000.898,D:\WinDesenv\WKPedido\Cliente\Teste.dfm=D:\WinDesenv\WKPedido\Cliente\Unit1.dfm</Transaction>
+    <Transaction>2022/12/11 09:48:43.000.898,D:\WinDesenv\WKPedido\Cliente\Teste.pas=D:\WinDesenv\WKPedido\Cliente\Unit1.pas</Transaction>
+    <Transaction>2022/12/11 11:31:49.000.900,D:\WinDesenv\WKPedido\Cliente\Teste.pas=</Transaction>
+    <Transaction>2022/12/13 19:26:36.000.745,=D:\WinDesenv\WKPedido\Cliente\Lib.pas</Transaction>
+  </Transactions>
+</BorlandProject>

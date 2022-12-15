@@ -1,0 +1,28 @@
+unit Server;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DbxDatasnap, Data.DBXCommon,
+  IPPeerClient, Data.SqlExpr, Data.DB, Datasnap.DBClient, Datasnap.DSConnect;
+
+type
+  TDMServer = class(TDataModule)
+    DSPBanco: TDSProviderConnection;
+    SQLCon: TSQLConnection;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMServer: TDMServer;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

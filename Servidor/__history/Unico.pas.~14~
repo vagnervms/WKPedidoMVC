@@ -1,0 +1,45 @@
+unit Unico;
+
+interface
+
+uses Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls;
+
+type
+  TFrmUnico = class(TForm)
+    Lbl: TLabel;
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+  function GetParms(Parametro: String): String;
+
+var
+  FrmUnico: TFrmUnico;
+
+implementation
+
+{$R *.dfm}
+
+uses ServerCont, ServerMet;
+
+procedure TFrmUnico.FormActivate(Sender: TObject);
+begin
+  ServerMethods.Banco.Params.Values['Server']:= GetParms('Servidor');
+{  ServerContainer.DSServerClass.OnGetClass(ServerContainer.DSServerClass, ServMeth);
+  ServMeth.
+  ServerMet.TServerMethods(ServMeth).Banco.Params.Values['Server']:= GetParms('Servidor');
+
+{  ServerContainer.DSServerClass.
+
+  ServerContainer.DSServerClassGetClass(ServerContainer.DSServerClass,vServerMethods);
+  FreeAndNil(vServerMethods);}
+  ServerContainer.DSServer.Start;
+end;
+
+end.
+

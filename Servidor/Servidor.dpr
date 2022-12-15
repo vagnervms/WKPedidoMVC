@@ -1,0 +1,21 @@
+program Servidor;
+
+uses
+  Vcl.Forms,
+  Web.WebReq,
+  IdHTTPWebBrokerBridge,
+  Unico in 'Unico.pas' {FrmUnico},
+  ServerMet in 'ServerMet.pas' {ServerMethods: TDSServerModule},
+  ServerCont in 'ServerCont.pas' {ServerContainer: TDataModule},
+  Lib in 'Lib.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmUnico, FrmUnico);
+  Application.CreateForm(TServerContainer, ServerContainer);
+  Application.Run;
+end.
+

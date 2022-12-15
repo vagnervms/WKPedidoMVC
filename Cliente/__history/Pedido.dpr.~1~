@@ -1,0 +1,14 @@
+program Pedido;
+
+uses
+  Vcl.Forms,
+  Pedidos in 'Pedidos.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

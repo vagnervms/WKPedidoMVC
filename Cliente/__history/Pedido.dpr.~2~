@@ -1,0 +1,16 @@
+program Pedido;
+
+uses
+  Vcl.Forms,
+  Pedidos in 'Pedidos.pas' {FrmPedidos},
+  Server in 'Server.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TFrmPedidos, FrmPedidos);
+  Application.Run;
+end.

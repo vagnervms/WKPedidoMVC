@@ -1,0 +1,32 @@
+object FrmUnico: TFrmUnico
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'Servidor DataSnap'
+  ClientHeight = 96
+  ClientWidth = 270
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poOwnerFormCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Lbl: TLabel
+    Left = 32
+    Top = 32
+    Width = 216
+    Height = 31
+    Caption = 'Servidor Rodando'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clFuchsia
+    Font.Height = -27
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+end

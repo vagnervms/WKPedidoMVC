@@ -1,0 +1,76 @@
+unit Server;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DbxDatasnap, Data.DBXCommon, Variants,
+  IPPeerClient, Data.SqlExpr, Data.DB, Datasnap.DBClient, Datasnap.DSConnect;
+
+type
+  TDMServer = class(TDataModule)
+    DSPBanco: TDSProviderConnection;
+    SQLCon: TSQLConnection;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+procedure NewSQL(SQL: String; Params: array of String; Values: array of Variant);
+function MaisUm(Tabela: String; Campo: array of String): Integer;
+
+var
+  DMServer: TDMServer;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+procedure NewSQL(SQL: String; Params: array of String; Values: array of Variant);
+var Qry: TSQLQuery; X: Byte;
+begin
+   Qry:= TSQLQuery.Create(Nil);
+   try
+     Qry.SQLConnection:= DMServer.SQLCon;
+     Qry.SQL.Text:= SQL;
+     if Length(Params) > 0 then
+     for X:= 0 to Length(Params)-1 do
+       TSQLQuery(Qry).ParamByName(Params[X]).Value:= Values[X];
+     try
+       Qry.ExecSQL;
+     except
+       ApplicationHandleException(Nil);
+       Abort
+     end
+   finally
+     Qry.Free;
+   end;
+end;
+
+function MaisUm(Tabela: String; Campo: array of String): Integer;
+var Cont: Byte; Qry: TSQLQuery;
+begin
+  Qry:= TSQLQuery.Create(Nil);
+  Qry.SQLConnection:= DMServer.SQLCon;
+  Qry.SQL.Text := 'SELECT MAX('+ Campo[0] + ') FROM '+ Tabela;
+  if high(Campo) > 0 then
+  begin
+    Qry.SQL.Text := Qry.SQL.Text +' WHERE '+ Campo[1] + ' = '+ Campo[2];
+    Cont:=3;
+    while Cont <= high(Campo) do
+    begin
+      Qry.SQL.Text := Qry.SQL.Text +' AND '+ Campo[Cont] + ' = '+ Campo[Cont + 1];
+      Cont := Cont + 2
+    end
+  end;
+  Qry.Open;
+  if Qry.Fields[0].AsVariant = Null
+  then Result:=1
+  else Result:=Qry.Fields[0].Value + 1;
+  Qry.Close;
+  Qry.Destroy;
+end;
+
+{$R *.dfm}
+
+end.

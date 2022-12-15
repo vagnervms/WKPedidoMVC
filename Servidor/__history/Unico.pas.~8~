@@ -1,0 +1,50 @@
+unit Unico;
+
+interface
+
+uses Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls;
+
+type
+  TFrmUnico = class(TForm)
+    Btn: TButton;
+    Lbl: TLabel;
+    procedure BtnClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmUnico: TFrmUnico;
+
+implementation
+
+{$R *.dfm}
+
+uses ServerCont;
+
+procedure TFrmUnico.BtnClick(Sender: TObject);
+begin
+  if Btn.Caption = 'Logar' then
+  begin
+    ServerContainer.DSServer.Start;
+    Btn.Caption:= 'Deslogar'
+  end
+  else
+  begin
+    ServerContainer.DSServer.Stop;
+    Btn.Caption:= 'Logar'
+  end;
+end;
+
+procedure TFrmUnico.FormActivate(Sender: TObject);
+begin
+  ServerContainer.DSServer.Start;
+end;
+
+end.
+
